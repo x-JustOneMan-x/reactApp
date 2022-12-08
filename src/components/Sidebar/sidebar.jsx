@@ -1,11 +1,22 @@
-const Sidebar = () => {
+const Sidebar = (props) => {
+    let state = props.state;
+
+    let cllients = state.cllients;
+
+    let res = cllients.map((item) => {
+        return (
+            <li>
+                <a href={item.id}>
+                    {item.name}
+                </a>
+            </li>
+        )
+    });
     return (
         <section className="section sidebar">
             <div className="sidebar__content">
                 <ul>
-                    <li><a href="1">Company A</a></li>
-                    <li><a href="2">Company B</a></li>
-                    <li><a href="3">Company C</a></li>
+                    {res}
                 </ul>
             </div>
         </section>

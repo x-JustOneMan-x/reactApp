@@ -7,7 +7,7 @@ const Company = () => {
                 <p>Number of required cargo bays 2</p>
                 <div className="company__boxes">
                     <h3>Cargo boxes</h3>
-                    <input type="text" readonly name="boxes" value="1,2.2,5,10" />
+                    <input type="text" readOnly name="boxes" value="1,2.2,5,10" />
                 </div>
             </div>
         </section>

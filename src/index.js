@@ -3,13 +3,18 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import App from './components/app/App';
 import './index.scss';
+import data from './data/shipments.json';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const state = {
+  cllients: data
+}
 
 let rerenderEntrireTree = () => {
   root.render(
     <React.StrictMode>
-      <App />
+      <App state={state} />
     </React.StrictMode>
   );
 }
