@@ -1,0 +1,47 @@
+$blue: #51abdf;
+$blueLight: #a5d6f3;
+$blueDark: #0f7fc0;
+$realyBlue: #00213a;
+
+.dialogs__contacts {
+    padding: 30px 15px;
+}
+
+.contacts {
+    &__item {
+        a {
+            padding: 5px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $realyBlue;
+            transition: all 0.3s ease;
+            &.active {
+                background: $blueDark;
+                .contacts__item-name {
+                    font-weight: bold;
+                    color: #fff;
+                }
+            }
+        }
+        &-name {
+            padding-left: 10px;
+        }
+        &-ava {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            overflow: hidden;
+            display: block;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &.active {
+            font-size: 20px;
+        }
+    }
+}

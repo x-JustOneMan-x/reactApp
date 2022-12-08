@@ -1,0 +1,65 @@
+.post__item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  border-bottom: 1px solid #0006;
+  &:last-child {
+    border-bottom: none;
+  }
+  &-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 10px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-content {
+    width: 100%;
+    margin-top: 20px;
+  }
+  &-time {
+    font-size: 10px;
+    opacity: 0.8;
+    margin-top: 5px;
+  }
+  &-author {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  &-adm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    .post-icon {
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+      .like__count {
+        font-size: 12px;
+      }
+      &.like {
+        fill: #d40f0f;
+      }
+      &.comment {
+        fill: #00213a;
+      }
+    }
+    svg {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      transition: all 0.3s ease;
+      margin-right: 5px;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

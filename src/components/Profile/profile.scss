@@ -1,0 +1,107 @@
+.profile {
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__banner {
+    width: 100%;
+    img {
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+  &__avatar {
+    margin-top: -80px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-right: 30px;
+    overflow: hidden;
+    margin-left: 1.5rem;
+  }
+  &__person-info {
+    margin-right: 1.5rem;
+    margin-top: -70px;
+    padding-bottom: 1rem;
+    h1 {
+      color: #fff;
+    }
+  }
+  .person {
+    &__info-item {
+      display: flex;
+      padding: 5px 0;
+      a {
+        text-decoration: none;
+        color: $blueDark;
+        font-weight: bold;
+      }
+      span {
+        font-weight: bold;
+      }
+      p {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__posts {
+    &-add {
+      padding: 1rem 1.5rem;
+    }
+    .form {
+      display: flex;
+      align-items: center;
+      &__avatar {
+        margin-right: 20px;
+        img {
+          width: 100px;
+          height: 100px;
+          overflow: hidden;
+          border-radius: 100%;
+        }
+      }
+      &__message {
+        flex: 1 0 auto;
+        position: relative;
+        button {
+          cursor: pointer;
+          background: transparent;
+          border: none;
+          outline: none;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          right: 20px;
+          svg {
+            width: 20px;
+            height: 20px;
+            fill: $blueDark;
+            transition: all 0.3s ease;
+          }
+          &:hover {
+            svg {
+              fill: #1818a4;
+            }
+          }
+        }
+        textarea {
+          font-family: "Montserrat";
+          font-size: 16px;
+          box-sizing: border-box;
+          width: 100%;
+          height: 70px;
+          resize: none;
+          border: 1px solid $blue;
+          outline: none;
+          border-radius: 20px;
+          padding: 10px 15px;
+          padding-right: 70px;
+        }
+      }
+    }
+    &-list {
+      padding: 1rem 1.5rem;
+    }
+  }
+}

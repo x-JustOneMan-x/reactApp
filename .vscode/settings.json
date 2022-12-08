@@ -1,0 +1,12 @@
+{
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "php": "html"
+    },
+    "emmet.showExpandedAbbreviation": "always",
+    "html-css-class-completion.enableEmmetSupport": true,
+    "emmet.syntaxProfiles": {
+        "php": "html"
+    },
+    "editor.formatOnSave": true
+}

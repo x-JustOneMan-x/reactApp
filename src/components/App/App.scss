@@ -1,0 +1,42 @@
+$blue: #51abdf;
+$blueLight: #a5d6f3;
+$blueDark: #0f7fc0;
+$realyBlue: #00213a;
+
+@import url(https://fonts.googleapis.com/css?family=Sansita+Swashed:300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Fredoka:300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+.wrapper {
+  font-family: "Montserrat";
+}
+
+.page {
+  display: flex;
+  position: relative;
+}
+
+.container {
+  max-width: 1380px;
+  width: 100%;
+  margin: auto;
+}
+.main-content {
+  width: calc(100% - 260px);
+  margin-left: auto;
+  margin-top: 65px;
+  h2 {
+    color: $realyBlue;
+  }
+}
+
+.cloud__container {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ceeafa;
+  margin: 20px 0;
+}
+
+@import "../Header/header";
+@import "../Profile/profile";
+@import "../Sidebar/sidebar";
