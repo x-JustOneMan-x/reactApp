@@ -1,14 +1,15 @@
+import { NavLink } from "react-router-dom";
+import Comp from "../company/comp/comp";
+
 const Sidebar = (props) => {
     let state = props.state;
 
     let cllients = state.cllients;
 
-    let res = cllients.map((item) => {
+    let res = cllients.map((item, key) => {
         return (
-            <li>
-                <a href={item.id}>
-                    {item.name}
-                </a>
+            <li key={item.id}>
+                <NavLink to={item.id}>{item.name}</NavLink>
             </li>
         )
     });

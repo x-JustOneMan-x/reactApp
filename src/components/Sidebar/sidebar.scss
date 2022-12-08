@@ -4,10 +4,16 @@
     background: #fff;
     border: 2px solid #000;
     margin-top: -1px;
+    &__content {
+        overflow: hidden;
+        height: calc(100vh - 72px);
+    }
     ul {
         display: flex;
         flex-direction: column;
         gap: 10px;
         font-size: 18px;
+        overflow-y: auto;
+        height: 100%;
     }
 }
