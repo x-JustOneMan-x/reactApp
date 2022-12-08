@@ -1,42 +1,30 @@
-$blue: #51abdf;
-$blueLight: #a5d6f3;
-$blueDark: #0f7fc0;
-$realyBlue: #00213a;
+@import "icons.scss";
+@import "../header/header";
+@import "../sidebar/sidebar";
+@import "../company/company";
 
-@import url(https://fonts.googleapis.com/css?family=Sansita+Swashed:300,regular,500,600,700,800,900);
-@import url(https://fonts.googleapis.com/css?family=Fredoka:300,regular,500,600,700);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
-.wrapper {
-  font-family: "Montserrat";
+$mainColor: #b1b1b1;
+
+body {
+  background: $mainColor;
+  overflow: hidden;
 }
 
 .page {
   display: flex;
-  position: relative;
+  height: 100%;
 }
 
-.container {
-  max-width: 1380px;
+
+.form__input {
+  border-radius: 10px;
   width: 100%;
-  margin: auto;
-}
-.main-content {
-  width: calc(100% - 260px);
-  margin-left: auto;
-  margin-top: 65px;
-  h2 {
-    color: $realyBlue;
-  }
+  padding: 5px 10px;
+  outline: none;
+  border: none;
 }
 
-.cloud__container {
-  border-radius: 20px;
-  overflow: hidden;
-  background: #ceeafa;
-  margin: 20px 0;
+ul {
+  list-style: none;
 }
-
-@import "../Header/header";
-@import "../Profile/profile";
-@import "../Sidebar/sidebar";

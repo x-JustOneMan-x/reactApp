@@ -1,34 +1,18 @@
 import './App.scss';
-import Header from '../Header/header';
-import Sidebar from '../Sidebar/sidebar';
-import Profile from '../Profile/profile';
-import Dialogs from '../Dialogs/dialogs';
-import { Route } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
-// import News from '../News/news';
-// import Music from '../Music/music';
-// import Settings from '../Settings/settings';
+import Header from '../header/header';
+import Sidebar from '../sidebar/sidebar';
+import Company from '../company/company';
 
-
-const App = (props) => {
+function App() {
   return (
-    <BrowserRouter>
-      <div className="wrapper">
-        <Header />
-        <div className="page container">
-          <Sidebar />
-          <div className="main-content">
-            <Route path="/profile/" render={() => <Profile store={props.store} />} />
-            <Route path="/dialogs/" render={() => <Dialogs store={props.store} />} />
-            {/* <Route path="/news/" component={News} />
-            <Route path="/music/" component={Music} />
-            <Route path="/settings/" component={Settings} /> */}
-          </div>
-        </div>
+    <div className="wrapper">
+      <Header />
+      <div className="page">
+        <Sidebar />
+        <Company />
       </div>
-    </BrowserRouter>
+    </div >
   );
-};
-
+}
 
 export default App;
