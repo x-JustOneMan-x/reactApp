@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import Comp from "../company/comp/comp";
 
 const Sidebar = (props) => {
     let state = props.state;

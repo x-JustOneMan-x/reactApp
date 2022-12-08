@@ -11,7 +11,7 @@ const Comp = (props) => {
         <div className="company__item">
             <h2>{props.company.name}</h2>
             <a href={"mailto:" + props.company.email}>{props.company.email}</a>
-            <p>Number of required cargo bays {cargo}</p>
+            <p>Number of required cargo bays <strong>{cargo}</strong></p>
             <div className="company__boxes">
                 <h3>Cargo boxes</h3>
                 <input type="text" readOnly name="boxes" value={props.company.boxes} />
