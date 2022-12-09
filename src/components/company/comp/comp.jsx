@@ -1,3 +1,4 @@
+import React from "react";
 
 const Comp = (props) => {
 
@@ -11,8 +12,13 @@ const Comp = (props) => {
         box = boxes;
     }
 
-
     let cargo = Math.ceil(boxesCount / 10);
+
+    let newCargo = React.createRef();
+
+    let onCargoChange = () => {
+
+    }
 
     return (
         <div className="company__item">
@@ -21,7 +27,7 @@ const Comp = (props) => {
             <p>Number of required cargo bays <strong>{cargo}</strong></p>
             <div className="company__boxes">
                 <h3>Cargo boxes</h3>
-                <input type="text" name="boxes" value={box} />
+                <input ref={newCargo} type="text" name="boxes" value={box} onChange={onCargoChange} />
             </div>
         </div>
     );
