@@ -6,11 +6,18 @@ const Sidebar = (props) => {
     let cllients = state.cllients;
 
     let res = cllients.map((item, key) => {
-        return (
-            <li key={item.id}>
-                <NavLink to={item.id}>{item.name}</NavLink>
-            </li>
-        )
+        if (props.search === '' || item.name.includes(props.search)) {
+            return (
+                <li key={item.id}>
+                    <NavLink to={item.id}>{item.name}</NavLink>
+                </li>
+            )
+        }
+        // return (
+        //     <li key={item.id}>
+        //         <NavLink to={item.id}>{item.name}</NavLink>
+        //     </li>
+        // )
     });
     return (
         <section className="section sidebar">
