@@ -17,7 +17,9 @@ const Company = (props) => {
         return needMap;
     }
 
+    //let company = getCompany(id);
     let company = getCompany(id);
+
     return (
         <section className="section company">
             <div className="company__content">
