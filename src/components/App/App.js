@@ -10,7 +10,7 @@ function App(props) {
         <Header />
         <div className="page">
           <Sidebar state={props.state} />
-          <Company />
+          <Company state={props.state} />
         </div>
       </div >
     </BrowserRouter>
