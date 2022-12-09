@@ -1,12 +1,23 @@
+import { useLocation } from "react-router-dom";
 import Comp from "./comp/comp";
 
 const Company = (props) => {
-    let company = {
-        "id": "e40b72",
-        "name": "Walmart",
-        "email": "contact@walmart.com",
-        "boxes": "3.3,3,3.2,1.6,5.4,2.1,2.7,4.6"
-    };
+
+    let id = useLocation().pathname.slice(1);
+
+    const getCompany = (id) => {
+        let needMap;
+        props.state.cllients.map((item, key) => {
+            let thisId = item.id;
+            if (thisId === id) {
+                needMap = item;
+            }
+            return item;
+        });
+        return needMap;
+    }
+
+    let company = getCompany(id);
     return (
         <section className="section company">
             <div className="company__content">

@@ -1,9 +1,16 @@
+
 const Comp = (props) => {
 
     const count = (arr) => arr.reduce((acc, num) => +acc + +num, 0);
     let boxes = props.company.boxes;
+    let boxesCount = 0;
+    let box = '';
 
-    let boxesCount = count(boxes.split(','));
+    if (boxes !== null) {
+        boxesCount = count(boxes.split(','));
+        box = boxes;
+    }
+
 
     let cargo = Math.ceil(boxesCount / 10);
 
@@ -14,7 +21,7 @@ const Comp = (props) => {
             <p>Number of required cargo bays <strong>{cargo}</strong></p>
             <div className="company__boxes">
                 <h3>Cargo boxes</h3>
-                <input type="text" readOnly name="boxes" value={props.company.boxes} />
+                <input type="text" name="boxes" value={box} />
             </div>
         </div>
     );
